@@ -11,6 +11,7 @@ import Home from "./components/Home";
 import Profile from "./components/Profile";
 import Images from "./components/Images";
 import BoardUser from "./components/BoardUser";
+import InputForm from "./components/InputForm";
 import BoardModerator from "./components/BoardModerator";
 import BoardAdmin from "./components/BoardAdmin";
 
@@ -66,20 +67,27 @@ const App = () => {
 
           {currentUser && (
             <li className="nav-item">
-              <Link to={"/user"} className="nav-link">
-                User
+              <Link to={"/profile"} className="nav-link">
+                My Account
               </Link>
             </li>
           )}
         
+        {currentUser && (
+              <li className="nav-item">
+                <Link to={"/form"} className="nav-link">
+                  Create a Review
+                </Link>
+              </li>
+            )}
 
-            {currentUser && (
+            {/* {currentUser && (
               <li className="nav-item">
                 <Link to={"/image"} className="nav-link">
                   Images
                 </Link>
               </li>
-            )}
+            )} */}
 </div>
         {currentUser ? (
           <div className="navbar-nav ml-auto">
@@ -118,6 +126,7 @@ const App = () => {
           <Route exact path="/register" component={Register} />
           <Route exact path="/profile" component={Profile} />
           <Route exact path="/image" component={Images} />
+          <Route exact path="/form" component={InputForm} />
           <Route path="/user" component={BoardUser} />
           {/* <Route path="/mod" component={BoardModerator} />
           <Route path="/admin" component={BoardAdmin} /> */}

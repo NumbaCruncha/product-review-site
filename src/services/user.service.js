@@ -6,6 +6,12 @@ const getPublicContent = (props) => {
     return axios.get(API_URL + props);
 };
 
+// Post form data
+const postInputForm = () => {
+    return axios.post(API_URL + "/product/", {headers: authHeader() });
+};
+
+
 
 const getUserBoard = () => {
     return axios.get(API_URL + "/user/", {headers: authHeader() });
@@ -25,6 +31,7 @@ export default {
     getPublicContent,
     getUserBoard,
     getModeratorBoard,
-    getAdminBoard
+    getAdminBoard,
+    postInputForm
 };
 

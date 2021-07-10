@@ -28,7 +28,7 @@ const Home = () => {
 <div>
     <Jumbotron>
   <h1>{ lastItem.name }</h1>
-  <h3>Type: </h3>
+  <h3>Index { lastItem.pk }</h3>
   <h5>Reviewed by {lastItem.user} on { lastItem.created }</h5>
   
   <p>

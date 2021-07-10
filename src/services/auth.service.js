@@ -28,11 +28,16 @@ const login = (username, password) => {
 
 
 const logout = () => {
-    return axios.post(API_URL + 'auth/logout/', {headers: authHeader() })
+    return axios.post(API_URL + 'auth/logout_all/', {headers: authHeader() })
     .then(localStorage.removeItem("user"));
 
-    // });
+        
+        
 };
+        
+
+    // });
+
 
     
 

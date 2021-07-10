@@ -12,11 +12,12 @@ const Profile = () => {
         </h3>
       </header>
       <p>
-        <strong>Access Token: </strong> {currentUser.access}
-      </p>
+        <strong>Access Token: </strong> {currentUser.access.substring(0,20)} ... {" "} 
+        {currentUser.access.substr(currentUser.access.length - 20)}
+              </p>
     <p>
-    <strong>Refresh Token: </strong> {currentUser.refresh.substring(0, 20)} ...{" "}
-        {currentUser.refresh.substr(currentUser.refresh.length - 20)}
+    <strong>Refresh Token: </strong> {currentUser.refresh.substring(0, 20)} ... {" "} 
+    {currentUser.refresh.substr(currentUser.refresh.length - 20)}
 
     </p>
 
