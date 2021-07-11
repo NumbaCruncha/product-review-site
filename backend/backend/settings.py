@@ -58,8 +58,8 @@ INSTALLED_APPS = [
     'corsheaders',
     'rest_framework',
     'rest_framework_simplejwt.token_blacklist',
-    'django_filters',
-    'versatileimagefield'
+    'django_filters'
+    # 'versatileimagefield'
     
 ]
 

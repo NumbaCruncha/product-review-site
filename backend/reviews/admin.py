@@ -2,9 +2,9 @@ from django.contrib import admin
 from .models import Product, Category, Company, ProductSize, ProductSite, Comment
 from django.contrib.auth.models import Group
 
-from .models import Image
+# from .models import Image
 
-admin.site.register(Image)
+# admin.site.register(Image)
 
 # admin.register() decorator
 @admin.register(Product)

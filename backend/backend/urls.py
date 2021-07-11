@@ -1,7 +1,7 @@
 
 from django.contrib import admin
 from django.urls import path, include
-from reviews.views import ProductViewSet, ImageViewSet, CommentViewSet
+from reviews.views import ProductViewSet,  CommentViewSet
 from rest_framework.routers import DefaultRouter
 from django.conf import settings
 from django.conf.urls.static import static
@@ -9,7 +9,7 @@ from django.conf.urls.static import static
 
 router = DefaultRouter()
 router.register(r'product', ProductViewSet, basename='Product')
-router.register(r'image', ImageViewSet, basename='Image')
+# router.register(r'image', ImageViewSet, basename='Image')
 router.register(r'comment', CommentViewSet, basename='Comment')
 
 urlpatterns = [

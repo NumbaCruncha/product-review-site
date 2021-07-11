@@ -1,9 +1,9 @@
 from .serializers import ProductSerializer, CommentSerializer
-from .models import Product, Image, Comment
+from .models import Product, Comment
 from rest_framework.viewsets import ReadOnlyModelViewSet
 from rest_flex_fields.views import FlexFieldsMixin
 from rest_flex_fields import is_expanded
-from .serializers import ImageSerializer
+# from .serializers import ImageSerializer
 from rest_flex_fields.views import FlexFieldsModelViewSet
 from rest_framework.permissions import IsAuthenticated
 
@@ -17,11 +17,11 @@ class CommentViewSet(FlexFieldsModelViewSet):
 
 
 
-class ImageViewSet(FlexFieldsModelViewSet):
+# class ImageViewSet(FlexFieldsModelViewSet):
 
-    serializer_class = ImageSerializer
-    queryset = Image.objects.all()
-    permission_classes= [IsAuthenticated]
+#     serializer_class = ImageSerializer
+#     queryset = Image.objects.all()
+#     permission_classes= [IsAuthenticated]
     
 
 class ProductViewSet(FlexFieldsMixin, ReadOnlyModelViewSet):

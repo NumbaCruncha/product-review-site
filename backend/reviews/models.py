@@ -31,7 +31,7 @@ class Product(models.Model):
     category = models.ManyToManyField(Category, related_name='products')
     created = models.DateField(auto_now_add=True)
     updated = models.DateField(auto_now=True)
-    image = models.ManyToManyField('reviews.Image', related_name='products')
+    # image = models.ManyToManyField('reviews.Image', related_name='products')
     
     class Meta:
         ordering = ['-created']
@@ -73,17 +73,17 @@ class CustomerReportRecord(models.Model):
 
 
 
-from versatileimagefield.fields import VersatileImageField, PPOIField
+# from versatileimagefield.fields import VersatileImageField, PPOIField
 
 
-class Image(models.Model):
-    name = models.CharField(max_length=255)
-    image = VersatileImageField(
-        'Image',
-        upload_to='images/',
-        ppoi_field='image_ppoi'
-    )
-    image_ppoi = PPOIField()
+# class Image(models.Model):
+#     name = models.CharField(max_length=255)
+#     image = VersatileImageField(
+#         'Image',
+#         upload_to='images/',
+#         ppoi_field='image_ppoi'
+#     )
+#     image_ppoi = PPOIField()
 
-    def __str__(self):
-        return self.name
+#     def __str__(self):
+#         return self.name

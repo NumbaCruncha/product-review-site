@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Product, Category, Company, ProductSize, ProductSite, Comment, CustomerReportRecord, Image
+from .models import Product, Category, Company, ProductSize, ProductSite, Comment, CustomerReportRecord
 from django.contrib.auth.models import User
 from django.utils.timezone import now
 from versatileimagefield.serializers import VersatileImageFieldSerializer
@@ -114,13 +114,13 @@ class UserSerializer(FlexFieldsModelSerializer):
 
 
 
-class ImageSerializer(FlexFieldsModelSerializer):
-    image = VersatileImageFieldSerializer(
-        sizes='product_headshot'
-    )
+# class ImageSerializer(FlexFieldsModelSerializer):
+#     image = VersatileImageFieldSerializer(
+#         sizes='product_headshot'
+#     )
 
-    class Meta:
-        model = Image
-        fields = ['pk', 'name', 'image']
+#     class Meta:
+#         model = Image
+#         fields = ['pk', 'name', 'image']
 
 
