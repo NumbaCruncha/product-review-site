@@ -2,7 +2,7 @@ from rest_framework import serializers
 from .models import Product, Category, Company, ProductSize, ProductSite, Comment, CustomerReportRecord
 from django.contrib.auth.models import User
 from django.utils.timezone import now
-from versatileimagefield.serializers import VersatileImageFieldSerializer
+# from versatileimagefield.serializers import VersatileImageFieldSerializer
 
 from rest_flex_fields import FlexFieldsModelSerializer
 
