@@ -26,6 +26,7 @@ VERSATILEIMAGEFIELD_RENDITION_KEY_SETS = {
     ]
 }
 
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
